@@ -1,0 +1,116 @@
+/* border: width style color  */
+
+
+/* variaveis para facilitar alteracoes */
+
+:root{
+    --cor-borda: lightblue;
+    --cor-borda-foco: lightgreen;
+    --cor-cinza-padrao: #e7e7e7;
+    --cor-cinza-fraca: #DDDAE0;
+    --cor-interior-fraco: whitesmoke;
+    --cor-interior-media: #F6F2FA;
+    --sombra-padrao: 0 0 10px 2px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.area__estilo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 630px;
+}
+
+.topo__estilo{
+    width: 400px;
+    margin-top: 12px;
+    
+    & .lista__estilo{
+        display: flex;
+        margin: 4px;
+        justify-content: space-around;        
+        list-style: none;
+        text-decoration: none;
+        background-color: var(--cor-cinza-padrao);
+        border-radius: 6px;
+    }
+
+    & button{
+        border: none var(--cor-cinza-padrao);
+        width: 180px;
+    }
+}
+
+.conteudo__estilo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px ;
+
+    & input[type="text"]{
+        margin-bottom: 12px;
+        border-radius: 2%;
+        box-shadow: var(--sombra-padrao) var(--cor-borda);
+    }
+
+    & input[type="text"]:focus{
+        outline: none;
+        box-shadow: var(--sombra-padrao) var(--cor-borda-foco);
+    }
+
+    & textarea{
+        resize: none;
+        padding: 12px;
+        box-sizing: border-box;
+        border-radius: 2%;
+        box-shadow: inset var(--sombra-padrao) var(--cor-borda);
+    }
+
+    & textarea:focus{
+        outline: none;
+        box-shadow: inset var(--sombra-padrao) var(--cor-borda-foco);
+    }
+
+    & button {
+        background-color: var(--cor-interior-fraca);
+        margin-top: 12px;
+        padding: 4px 0;
+        border-radius: 2%;
+        border: 1px none var(--cor-cinza-padrao);
+        box-shadow: var(--sombra-padrao) var(--cor-cinza-fraca);
+    }
+    & button:hover{
+        background-color: var(--cor-interior-media);
+        box-shadow: var(--sombra-padrao) var(--cor-borda-foco);
+    }
+}
+
+.rodape__estilo{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    height: 40px;
+    width: 400px;
+    background-color: var(--cor-cinza-fraca);
+    border-radius: 4px;
+
+    & img{
+        margin-top: 3px;
+        width: 35px;
+    }
+}
+
+@media (max-width:1366px) and (min-width:700px){
+    .rodape__estilo{
+        position: relative;
+        bottom: 0;
+    }
+}

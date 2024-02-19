@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas</title>
+    <link rel="stylesheet" href="estilo/estilo.css">
+</head>
+<body>
+    <!-- area para criar o bloco de notas -->
+    <div class="area__estilo">
+        <!-- topo -->
+        <div class="topo__estilo">
+            <ul class="lista__estilo">
+                <li><button id="botao__editar">editar</button></li>
+                <li><button id="botao__apagar">apagar</button></li>
+            </ul>
+        </div>
+        <!-- coteudo (bloco para escrever) -->
+        <div class="conteudo__estilo">
+            <input type="text" name="nome" id="titulo" placeholder="Título">
+            <textarea name="diario" id="conteudo" cols="50" rows="30" placeholder="Anotações"></textarea>
+            <button id="botao__salvar">salvar</button>
+        </div>
+        <!-- rodape (é sempre bom ter, como seu github por exemplo, por que não?) -->
+        <div class="rodape__estilo">
+            <h3>Github</h3>
+            <a href="https://github.com/aqueroz"><img src="https://github.com/aqueroz.png" alt="imagem do perfil github"></a>
+        </div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
+
